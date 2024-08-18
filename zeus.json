@@ -1,0 +1,21 @@
+{
+  "response": [
+    {
+      "maintainer": "rpi_luver",
+      "oem": "Xiaomi",
+      "device": "12 Pro",
+      "filename": "EvolutionX-14.0-20240818-dagda-v9.3-Unofficial.zip",
+      "download": "https://sourceforge.net/projects/zeus-aosp-development/files/Evolution%20X%20%28based%20on%20LineageOS%29%20-%20UNOFFICIAL/2024-08-18/EvolutionX-14.0-20240818-dagda-v9.3-Unofficial.zip/download",
+      "timestamp": 1723950749,
+      "md5": "643bbf0116f1b7fbf98e130c58d419fb",
+      "sha256": "c04704553512736e0488aae71e288f3705405cc36d83bd4c4ec47cff7f227a4a",
+      "size": 2797016670,
+      "version": "9.3",
+      "buildtype": "Unofficial",
+      "forum": "https://xdaforums.com/t/rom-14-0-unofficial-evolution-x-for-xiaomi-12-pro.4656780/",
+      "firmware": "",
+      "paypal": "",
+      "telegram": "https://t.me/truly-irham"
+    }
+  ]
+}

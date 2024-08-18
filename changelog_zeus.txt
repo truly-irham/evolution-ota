@@ -1,0 +1,158 @@
+2024-08-18
+
+Unofficial Evolotion X v9.3 release for Xiaomi 12 Pro "dagda/zeus"
+by rpi_luver
+
+Credits: @ArianK16a, @Adrianyyyy and all other devs involved
+
+
+# Device / Kernel
+
+QPR3 build
+OTA update is now supported on the upcoming releases
+Signed build (dirty flash should work over my previous builds)
+CTS passed by default
+Added Webcam option via USB and various improvement on our trees
+
+Others (cupid-development/android_device_xiaomi_dagda):
+* b8a07d1 - (cupid-development/lineage-21) dagda: Partially revert "Move to QTI health AIDL service" (3 days ago) <Sebastiano Barezzi>
+* 001c46c - dagda: Remove unused adreno firmwares (4 days ago) <Arian>
+* a4ebe95 - dagda: Drop prebuilt libmemunreachable.so (6 days ago) <Arian>
+* e5eb0a2 - dagda: Drop some audio libs which are built from source now (6 days ago) <Arian>
+* e85af3c - dagda: Get rid of 32 bit blobs (6 days ago) <Arian>
+* ab388f6 - dagda: Don't provide a module for libssccalapi@2.0 (6 days ago) <Arian>
+
+Others (cupid-development/android_device_xiaomi_sm8450-common):
+* aaa391c8 - sm8450-common: Migrate to QTI USB Gadget 1.2 HIDL (2 weeks ago) <Yumi Yukimura>
+* 34a56e7e - sm8450-common: Swap to QTI USB init scripts (2 weeks ago) <Nolen Johnson>
+* 856fd64d - sm8450-common: Partially revert "Move to QTI health AIDL service" (2 weeks ago) <Sebastiano Barezzi>
+* 7851954b - sm8450-common: Use soong_config_set to set xiaomi powershare variable (2 weeks ago) <Arian>
+* 6b3861b8 - sm8450-common: Unset BUILD_BROKEN_INCORRECT_PARTITION_IMAGES (2 weeks ago) <Bruno Martins>
+* d7617868 - sm8450-common: Convert WiFi firmware symlink to install_symlink target (2 weeks ago) <Bruno Martins>
+* 6627192d - sm8450-common: Mark CNE symlink target as required package (2 weeks ago) <Bruno Martins>
+* 289b89f3 - sm8450-common: Declare EGL libs as symlinks during extraction (2 weeks ago) <Bruno Martins>
+* d39f2912 - sm8450-common: Declare IMS and WFD libs as symlinks during extraction (2 weeks ago) <Bruno Martins>
+* c90c4bda - sm8450-common: Move to new RFS install_symlink targets (2 weeks ago) <Bruno Martins>
+* 050a7346 - sm8450-common: Remove wait_for_keymaster and all references (2 weeks ago) <Paul Crowley>
+* dcef5e1c - sm8450-common: Build missing libraries for 14 QPR3 (2 weeks ago) <Michael Bestas>
+
+Others (cupid-development/android_kernel_xiaomi_sm8450):
+ys ago) <Arian>
+* 76cb47a3eeff - input: touchscreen: xiaomi: Drop clicktouch_raw (2 days ago) <Arian>
+* d3930f1c9d33 - input: touchscreen: xiaomi: Implement resolution_factor (2 days ago) <Ar
+ian>
+* 4a03ce622f1b - input: touchscreen: Import xiaomi touch driver from mayfly-s-oss (2 days
+ ago) <Arian>
+* 0297542c519a - drivers: input: misc: aw86927_haptic: Replace mtk with qcom properties (
+2 days ago) <TheStrechh>
+* 64e530602208 - input: misc: Imort aw86927_haptic driver from mayfly-s-oss (2 days ago) 
+<Arian>
+* 677f0023083f - input: misc: Import aw8698_haptic driver from mayfly-s-oss (2 days ago) 
+<Arian>
+* 9e9f4884d8b6 - input: Import stmvl53l5 driver from garnet-t-oss (2 days ago) <Jens Reid
+el>
+* 5da59d816f15 - input: fingerprint: Import goodix_3626 from marble-s-oss (2 days ago) <J
+ens Reidel>
+* cda2e66af568 - input: fingerprint: Import fpc_1540 from marble-s-oss (2 days ago) <Jens
+ Reidel>
+* 55331b908c1b - input: fingerprint: Import goodix_fod driver from mayfly-s-oss (2 days a
+go) <Arian>
+* ceec20aca3c8 - misc: Introduce simplified xiaomi hardware identification driver (2 days
+ ago) <Arian>
+* de7a144636a5 - kgsl: hwsched: Don't cross dereference kgsl_mem_entry pointer (2 days ag
+o) <Harshdeep Dhatt>
+*   0bc6e8606f45 - Merge tag 'KERNEL.PLATFORM.1.0.r1-18100-kernel.0' of https://git.codel
+inaro.org/clo/la/kernel/msm-5.10 into android13-5.10-waipio (2 days ago) <Michael Bestas>
+
+
+# Rom
+
+AudioService: do not block focus request from applications compiled with lower version sdks
+Avoid device reboot caused by SecurityException.
+BubbleStackView: Fix java code parsing error
+CSD: Remove bluetooth a2dp devices for safe volume index devices
+CUR_MAX_CACHED_PROCESSES is not greater than the maximum value allowed
+Camera: Fix camera id equal check
+CameraManager: Prevent array index out of bound exception
+CameraManager: Prevent out of bounds when extracting camera IDs
+Delay garbage collection to prevent deadlocks during screen on
+Disable checks to allow explicit GC for sysui/system_server
+Evolver: Introduce Shake Gestures
+Evolver: Introduce Three finger swipe/long press gestures      
+Evolver: Move gesture features to its own fragment
+FileUtils: Silence Logspam
+Fix UiModeManager context memory leak for SearchManager
+Fix exception when setTorchMode
+Fix memory leak on MediaProjectionPermissionActivity
+Fix null pointer exception issue when animation
+Fix the darker effect when app returns to the desktop
+Fix the issue that the approach of DisplayListener.onDisplayChanged() can not be called when there are multiple processed for a same single application.
+FlashlightControllerImpl: Fix crash when camera IDs list is null
+GameSpace: Don't add floating action if game closed too quickly
+GameSpace: Enable enableOnBackInvokedCallback
+GameSpace: Fix ClassCastException during onNotificationPosted
+GameSpace: Implement Three finger swipe changes
+GameSpace: Import qs_tile_background ripple resource for tile
+GameSpace: Migrate MainSwitchBar and Switch to Material3
+GameSpace: Move game library to its own preference
+GameSpace: Show correct default settings
+ImageReader: Allow skipping of nativeDetachImage
+ImageReader: Remove native call to detachImage
+Island: Recycle icon bitmap to avoid memory leak
+JobScheduler: Remove jobs for non-existent packages
+Make Dialer appear in the microphone recent list of Privacy settings
+Mark SMS premium code 8080 as free in Poland
+MediaSessionService: use a stack to hold the media button receivers
+Merge August 2024 security patches
+PackageInstaller: fix NPE due to a race condition in PackageUtil
+PhoneWindowManager: Check NPE for LineageHardware
+Settings: Add toggle for Smart 5G
+Settings: Hide ADB and developer setting enable status
+Settings: Move Notch Cutout to Display
+Settings: SoftAP: Add client manager
+Settings: SoftAp: add Hidden SSID preference
+Settings: SoftAp: add support for setting shutdown timeout
+Settings: colors: Update color previews
+Silence ExifInterface logspam
+Smart5gService: guard it with overlay
+SystemUI: Add dimens to set max offset of navigation bar burn-in protection
+SystemUI: Debounce QS data usage updates
+SystemUI: Default to true for HeadsUp notifications
+SystemUI: Don't enforce Island notif on landscape
+SystemUI: Enable refresh rate QS tile if multiple refresh rates supported
+SystemUI: Fix crash when click rotation button on keyguard
+SystemUI: Fix crash when switching QS view parents
+SystemUI: Fix systemui crash when checking headups whitelist packages
+SystemUI: Implement burn-in protection for status/navbar
+SystemUI: Resolve regressions caused by continuous updating of notification icons
+SystemUI: Revamp QS data usage UI
+SystemUI: Show island notification on landscape
+SystemUI: Use system_accent1_200 for monetized privacy indicators
+Update statusBarState in KeyguardStatusBarViewController
+Upload the texture for BitmapShader only when it's dirty or under the cache max.
+[SQUASH] base: Hide ADB and developer setting enable status [1/2
+base: Do not gc twice on keyguard
+base: Introduce Smart 5G service [1/2]
+certification: 08/17/2024 Update
+config: Drop duplicate setupwizard theme prop
+config: Remove useless addon.d file
+core: Explicitly enable freeform windows and multi-window support
+core: Introduce VibrationUtils
+disable OtaDexoptService
+fixup! SwipeToScreenshot: Import MIUI implementation
+hwui: Prevent renderthread crash caused by thread safety issue
+improve PendingIntent security check compatibility
+keyguard: Do not trigger a wake up when hiding lockscreen
+overlay: Enable aspect ratio settings
+pixel-style: Add new setupwizard props from caiman
+pixel-style: Refactor PixelLauncherCustomOverlay
+pixel-style: overlay: Disable Google Dialer Call recording TTS
+recovery_ui: Retry for getting battery info
+run full explicit GC in SystemUI and system_server after locking
+services: Fix swipe to screenshot gestures detection
+services: Introduce GestureCallbacks
+services: Introduce Shake Gestures
+services: Introduce Three finger swipe gestures [1/2]
+services: Introduce three finger long press gestures [1/2]
+shell: Fix crash after dismissing a split screen pair
+vendor: overlay: Add PhenotypeFlagsUtils
